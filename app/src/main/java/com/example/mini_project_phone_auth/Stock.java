@@ -6,17 +6,12 @@ public class Stock {
     private String stockName;
     private double price;
     private int quantity;
+    private int stockId;
 
     public Stock(){
 
     }
 
-    public Stock(User user, String stockName, double price, int quantity) {
-        this.user = user;
-        this.stockName = stockName;
-        this.price = price;
-        this.quantity = quantity;
-    }
 
     public User getUser() {
         return user;
@@ -26,7 +21,7 @@ public class Stock {
         this.user = user;
     }
 
-    public String getItemName() {
+    public String getStockName() {
         return stockName;
     }
 
@@ -48,5 +43,24 @@ public class Stock {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    public int getStockId() {
+        return stockId;
+    }
+
+    public void setStockId(int stockId) {
+        this.stockId = stockId;
+    }
+
+    @Override
+    public String toString() {
+        return "Stock{" +
+                "user=" + user +
+                ", stockName='" + stockName + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                ", stockId=" + stockId +
+                '}';
     }
 }

@@ -86,6 +86,19 @@ public class MainPage extends AppCompatActivity {
                         }
                 );
 
+                buy.setOnClickListener(
+                        new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+                                Intent intent=new Intent(MainPage.this, BuyView1.class);
+                                intent.putExtra("phone_number", phone_number);
+                                startActivity(intent);
+
+                            }
+                        }
+                );
+
 
 
             }

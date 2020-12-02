@@ -101,7 +101,7 @@ confirm.setOnClickListener(new View.OnClickListener() {
                     Stock stock = snapshot.getValue(Stock.class);
                     if(stock.getUser().getPhone().equals(phone_number)){
 
-                            if (stock.getItemName().equals(fruitName)) {
+                            if (stock.getStockName().equals(fruitName)) {
 
                             int newQuantity = stock.getQuantity() + Integer.parseInt(quantity.getText().toString());
                             stock.setQuantity(newQuantity);
